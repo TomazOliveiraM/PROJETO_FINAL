@@ -24,39 +24,3 @@ A estrutura de uma tarefa (`title`, `description`, `completed`) se encaixa perfe
 
 Um índice foi criado no campo `createdAt` (gerado pelos `timestamps` do Mongoose) para otimizar a consulta que busca e ordena as tarefas pela data de criação, garantindo que a listagem seja sempre rápida, mesmo com um grande volume de dados.
 
-## Como Rodar o Projeto
-
-### Pré-requisitos
-
-- Node.js e npm instalados.
-- Uma instância do MongoDB (local ou em um serviço como o MongoDB Atlas).
-
-### Passos
-
-1. **Clone o repositório:**
-   ```bash
-   git clone <url-do-seu-repositorio>
-   cd <nome-do-repositorio>
-   ```
-
-2. **Instale as dependências:**
-   ```bash
-   npm install
-   ```
-
-3. **Configure as variáveis de ambiente:**
-   - Crie um arquivo `.env` na pasta `backend`.
-   - Adicione a sua string de conexão do MongoDB:
-     ```env
-     MONGO_URI=mongodb+srv://...
-     JWT_SECRET=seu_segredo_super_secreto_para_jwt
-     ```
-     > **Nota de Segurança:** O arquivo `.env` contém informações sensíveis e **não deve** ser enviado para o GitHub. O arquivo `.gitignore` já está configurado para impedir isso.
-
-4. **Inicie o servidor:**
-   ```bash
-   node backend/server.js
-   ```
-
-5. **Acesse a aplicação:**
-   Abra seu navegador e acesse `http://localhost:3000`.
