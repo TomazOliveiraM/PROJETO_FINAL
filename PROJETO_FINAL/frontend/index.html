@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Seção de Autenticação -->
+  <div id="auth-container">
+    <div id="login-view">
+      <h1>Login</h1>
+      <form id="login-form">
+        <input type="text" id="login-username" placeholder="Usuário" required>
+        <input type="password" id="login-password" placeholder="Senha" required>
+        <button type="submit">Entrar</button>
+      </form>
+      <p>Não tem uma conta? <a href="#" id="show-register">Registre-se</a></p>
+    </div>
+
+    <div id="register-view" style="display: none;">
+      <h1>Registro</h1>
+      <form id="register-form">
+        <input type="text" id="register-username" placeholder="Usuário" required>
+        <input type="password" id="register-password" placeholder="Senha" required>
+        <button type="submit">Registrar</button>
+      </form>
+      <p>Já tem uma conta? <a href="#" id="show-login">Faça o login</a></p>
+    </div>
+  </div>
+
+  <!-- Seção Principal da Aplicação (inicialmente oculta) -->
+  <div id="app-container" style="display: none;">
+    <div class="app-header">
+      <h1>Minhas Tarefas</h1>
+      <button id="profile-btn">Perfil</button>
+      <button id="logout-btn">Sair</button>
+    </div>
+
+    <div class="filter-controls">
+      <div class="sort-controls">
+        <span>Ordenar por:</span>
+        <button id="sort-by-date-btn" class="active">Data</button>
+        <button id="sort-by-priority-btn">Prioridade</button>
+      </div>
+      <div class="search-controls">
+        <input type="text" id="search-input" placeholder="Buscar por título...">
+      </div>
+    </div>
+
+    <form id="taskForm">
+      <input type="text" id="title" placeholder="Título" required>
+      <input type="text" id="description" placeholder="Descrição">
+      <select id="priority" name="priority">
+        <option value="baixa">Baixa</option>
+        <option value="média" selected>Média</option>
+        <option value="alta">Alta</option>
+      </select>
+      <button type="submit">Adicionar</button>
+    </form>
+
+    <ul id="taskList"></ul>
+
+    <button onclick="exportTasks()">Exportar JSON</button>
+  </div>
+
+  <!-- Seção do Perfil do Usuário (inicialmente oculta) -->
+  <div id="profile-container" style="display: none;">
+    <div class="app-header">
+      <h1>Perfil do Usuário</h1>
+      <button id="back-to-tasks-btn">Voltar</button>
+    </div>
+    <div id="profile-content">
+      <h2 id="profile-username"></h2>
+      <p id="profile-member-since"></p>
+      <h3>Estatísticas</h3>
+      <div class="stats-grid">
+        <div class="stat-card"><h4>Total de Tarefas</h4><p id="stat-total"></p></div>
+        <div class="stat-card"><h4>Tarefas Concluídas</h4><p id="stat-completed"></p></div>
+        <div class="stat-card"><h4>Tarefas Pendentes</h4><p id="stat-pending"></p></div>
+        <div class="stat-card"><h4>Prioridade Alta</h4><p id="stat-priority-high"></p></div>
+        <div class="stat-card"><h4>Prioridade Média</h4><p id="stat-priority-medium"></p></div>
+        <div class="stat-card"><h4>Prioridade Baixa</h4><p id="stat-priority-low"></p></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
