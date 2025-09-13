@@ -44,24 +44,7 @@ Este é um projeto de uma aplicação de lista de tarefas (To-Do List) completa,
   - **JavaScript (Vanilla JS)**: Para manipulação do DOM e lógica da interface.
 
 O modelo de documentos do MongoDB foi escolhido porque cada tarefa pode ser representada de forma natural e independente como um documento JSON. Isso oferece flexibilidade para adicionar novos campos no futuro (como `prioridade` ou `data de vencimento`) sem a necessidade de migrações de esquema complexas, como seria em um banco SQL.
-## 📂 Estrutura do Projeto
 
-A estrutura de uma tarefa (`title`, `description`, `completed`) se encaixa perfeitamente em um documento, e as operações de CRUD são diretas e eficientes.
-```
-/
-├── backend/
-│   ├── models/         # Modelos do Mongoose (User, Task)
-│   ├── routes/         # Definição das rotas da API (auth, tasks, users)
-│   ├── middleware/     # Middlewares (ex: verificação de token)
-│   ├── .env            # Arquivo de variáveis de ambiente (NÃO versionado)
-│   ├── server.js       # Ponto de entrada do servidor Express
-│   └── package.json
-│
-└── frontend/
-    ├── index.html      # Estrutura principal da página
-    ├── style.css       # Estilos da aplicação
-    └── script.js       # Lógica do frontend (chamadas de API, manipulação do DOM)
-```
 
 ## ⚙️ Configuração e Instalação
 
