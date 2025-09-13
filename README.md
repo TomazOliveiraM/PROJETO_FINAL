@@ -1,5 +1,5 @@
 # Projeto To-Do List com NoSQL (MongoDB)
-# Projeto To-Do List Full-Stack
+# Projeto To-Do List 
 
 Este é um projeto de uma lista de tarefas simples construído com Node.js, Express, MongoDB e uma interface em HTML/JS puro.
 Este é um projeto de uma aplicação de lista de tarefas (To-Do List) completa, construída com o stack MERN (MongoDB, Express, Node.js) e um frontend em HTML, CSS e JavaScript puro. A aplicação permite que os usuários se registrem, façam login e gerenciem suas próprias tarefas pessoais.
